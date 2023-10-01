@@ -2,12 +2,8 @@
 
 <template>
 
-  <MainHeader></MainHeader>
+
   <main>
- 
-
-
-
 
 <div id="topMessage">6/1~6/31新會員招募中，享有優惠，<a class="discount">詳細資訊</a>
 </div> 
@@ -24,7 +20,7 @@
 </div>
 <div id="overlay"></div>
 <div class="banner">
-  <video autoPlay muted width="100%" height="100%">
+  <video autoPlay muted class="banner_video">
     <source src='@/assets/images/coverr-philippine-islands-2985-1080p.mp4' type="video/mp4" />
   </video>
   <h4>Stay Here and Enjoy</h4>
@@ -47,7 +43,7 @@
       <div class="booking-info-man">
         <label for="">大人</label><img src="@/assets/images/online/Vector.svg" alt="plus" id="indexPlus">
         <input id="indexAdult" type="text" value="0" style="text-align: center;">
-        <img src="online/minus-solid 1.svg" alt="minus"  id="indexMinus">
+        <img src="@/assets/images/online/minus-solid 1.svg" alt="minus"  id="indexMinus">
       </div>
 
       <div class="booking-info-child">
@@ -453,38 +449,7 @@
 </div>
 
 
-<section class="footer">
-  <div class="container">
-    <div class="row">
 
-      <div class="footer-logo">
-        <a href="index.html"><img src="@/assets/images/logo.png" alt="seesea-logo" />
-        </a>
-      </div>
-      <div class="footer-txt">
-        <h4><a href="news.html">最新消息</a></h4>
-        <h4><a href="q&a.html">常見問題</a></h4>
-        <h4><a href="aboutus.html">關於我們</a></h4>
-        <h4><a href="tour.html">周邊景點</a></h4>
-        <h4><a href="room.html">房型介紹</a></h4>
-        <h4><a href="online.html">線上訂房</a></h4>
-      </div>
-      <div class="footer-address">
-        <h4>電話:03-1234567</h4>
-        <h4>地址:台東縣台東市岩灣路101巷999號</h4>
-      </div>
-      <div class="footer-social">
-        <a href="#"><img src="@/assets/images/index/footer/tweet.svg" /></a>
-        <a href="#"><img src="@/assets/images/index/footer/ins.svg" /></a>
-        <a href="#"><img src="@/assets/images/index/footer/fb.svg" /></a>
-        <a href="#"><img src="@/assets/images/index/footer/line white.svg" /></a>
-      </div>
-
-    </div>
-
-  </div>
-  <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
-</section>
 
 
 
@@ -493,5 +458,5 @@
 </template>
 
 <script setup>
-import MainHeader from '../components/MainHeader.vue';
+
 </script>
