@@ -32,8 +32,8 @@
     <div class="home-booking-info">
       <div class="booking-info-in">
         <label for="">入住日期
-          <input type="date" value="2023-06-10">
         </label>
+        <input type="date" value="2023-06-10">
       </div>
       <div class="booking-info-quit">
         <label for="">離開日期
@@ -91,63 +91,10 @@
     </div>
   </div>
 
+<HomeNews></HomeNews>
+<HomeSpot></HomeSpot>
 
-
-  <div class="home-news area">
-    <div class="home-news-container">
-      <h2>最新消息</h2>
-      <div class="news-card-list">
-        <div class="news-card">
-          <div class="news-card-pic">
-            <img src="@/assets/images/index/main-news/Sanxiantai.jpg" alt="Sanxiantai">
-          </div>
-          <div class="news-txt">
-            <p>夜探三仙台 -三仙台5月至10月開放預約報名</p>
-            <div class="news-bottom">
-              <p>2023-04-27</p>
-              <img src="@/assets/images/index/main-news/eye.svg" alt="viewer">
-              <span>1458</span>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="news-card">
-          <div class="news-card-pic">
-            <img src="@/assets/images/index/main-news/flower.jpg" alt="flower">
-          </div>
-          <div class="news-txt">
-            <p>台東鹿野地區油桐花季</p>
-            <div class="news-bottom">
-              <p>2023-04-21</p>
-              <img src="@/assets/images/index/main-news/eye.svg" alt="viewer">
-              <span>23213</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="news-card">
-          <div class="news-card-pic">
-            <img src="@/assets/images/index/main-news/museum.jpg" alt="
-      museum">
-          </div>
-          <div class="news-txt">
-            <p>國立台灣史前文化博物館將於5/19(五)重新開幕</p>
-            <div class="news-bottom">
-              <p>2023-04-20</p>
-              <img src="@/assets/images/index/main-news/eye.svg" alt="viewer">
-              <span>11458</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button><a href="news.html">了解更多</a></button>
-    </div>
-  </div>
-
-
-
-  <div class="home-spot area">
+  <!-- <div class="home-spot area">
     <div class="container">
       <h2>鄰近景點</h2>
       <div class="spot-area-list">
@@ -231,6 +178,8 @@
 
         </div>
       </div>
+
+   
       <div class="home-spot-youtube area">
         <div class="row ">
         <div class="col">
@@ -267,14 +216,14 @@
           </div>
         </div>
       </div>
-  </div>
+  </div>  -->
 
   <div class="home-food area">
     <div class="container">
       <h2>美味佳餚</h2>
       <div class="home-food-area">
 
-        <div class="home-food-pic">
+        <div class="home-food-pic" >
           <img src="@/assets/images/index/main-food/anna-pelzer-IGfIGP5ONV0-unsplash 1.jpg" alt="food">
           <img src="@/assets/images/index/main-food/alex-munsell-Yr4n8O_3UPc-unsplash 1.jpg" alt="food">
           <img src="@/assets/images/index/main-food/do-mee-SH8_JmrsQcw-unsplash 1.jpg" alt="food">
@@ -286,8 +235,6 @@
       </div>
     </div>
   </div>
-
-
 
   <div class="home-facility area">
     <div class="home-facility-container">
@@ -447,16 +394,20 @@
   </a>
   <a href="#"><img src="@/assets/images/index/footer/line 1 (2).svg" /></a>
 </div>
-
-
-
-
-
-
-
   </main>
 </template>
 
 <script setup>
+import HomeNews from '../components/HomeNews.vue';
+import HomeSpot from '../components/HomeSpot.vue';
 
+import { ref, reactive } from 'vue';
+
+
+const homeFood = reactive([
+'anna-pelzer-IGfIGP5ONV0-unsplash 1.jpg',
+'alex-munsell-Yr4n8O_3UPc-unsplash 1.jpg',
+'do-mee-SH8_JmrsQcw-unsplash 1.jpg',
+
+])
 </script>

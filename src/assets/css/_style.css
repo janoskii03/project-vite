@@ -369,7 +369,7 @@ align-items: center;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-
+cursor: pointer;
   margin: 0 auto 3rem;
   position: relative;
 }
@@ -539,7 +539,7 @@ align-items: center;
 /*設施介紹*/
 
 .home-facility {
-  background-image: url('index/Group\ 177.jpg');
+  background-image: url('src/assets/images/index/Group177.jpg');
   background-size: cover;
   margin-bottom: 3rem;
   padding: 2rem 0;
