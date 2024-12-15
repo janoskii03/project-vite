@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -13,11 +13,11 @@ import 'aos/dist/aos.css'
 
 
 // 全域樣式
-import "@/assets/css/_style.css"
+import "@/assets/css/_style.scss"
 
 AOS.init({
     duration: 1000,
-    
+
 });
 
 

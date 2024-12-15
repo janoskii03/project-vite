@@ -1,5 +1,6 @@
-@import '@/assets/css/grid.css';
-@import '@/assets/main.css';
+@import '@/assets/css/grid.scss';
+@import '@/assets/main.scss';
+@import '@/assets/css/mixin.scss';
 
 * {
   padding: 0;
@@ -7,7 +8,10 @@
   list-style: none;
   font-family: 'Noto Serif TC', serif;
 }
-
+#app {
+  width: 100%;
+  height: 100%;
+}
 a {
   text-decoration: none;
   color: #000;
@@ -269,10 +273,13 @@ h2 {
   border-radius: 10px;
 }
 
-.home-booking .home-booking-info .booking-info-in ,.home-booking .home-booking-info .booking-info-quit,.home-booking .home-booking-info .booking-info-man,.home-booking .home-booking-info .booking-info-child{
-display: flex;
-justify-content: center;
-align-items: center;
+.home-booking .home-booking-info .booking-info-in,
+.home-booking .home-booking-info .booking-info-quit,
+.home-booking .home-booking-info .booking-info-man,
+.home-booking .home-booking-info .booking-info-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-booking .home-booking-info .booking-info-in input,
@@ -369,7 +376,7 @@ align-items: center;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-cursor: pointer;
+  cursor: pointer;
   margin: 0 auto 3rem;
   position: relative;
 }
@@ -888,111 +895,6 @@ cursor: pointer;
 
 /*關於我們*/
 
-.about img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.about .container .row {
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.about .container .row h3 {
-  font-size: 2rem;
-  margin: 7rem 0 2rem;
-}
-
-.about .about-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about .about-home img {
-  width: 100%;
-}
-
-.about-home .home-txt {
-  width: 100%;
-  max-width: 25rem;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  margin-bottom: 2rem;
-}
-
-.about-home .home-txt p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.about-home .down-right {
-  width: 100%;
-  max-width: 25rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 2rem;
-}
-
-.about-home .down-right p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.about-home .down-right p:nth-child(1) {
-  text-align: center;
-}
-
-.about-home .up-right,
-.about-home .down-left,
-.about-home .down-left-next,
-.about-home .left-after,
-.about-home .left-after-next {
-  margin-bottom: 2rem;
-}
-
-.about .container .about-room-inside img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.about .about-card {
-  margin-bottom: 3rem;
-}
-
-.about .about-card .about-card-txt {
-  max-width: 25rem;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #b7e3ec;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-
-.about .about-card .about-card-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.about-room-inside .inside1,
-.about-room-inside .inside2,
-.about-room-inside .inside3,
-.about-room-inside .inside4,
-.about-room-inside .inside5 {
-  margin-bottom: 2rem;
-}
-
-.about .background-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.about .background-pic {
-  margin-bottom: 2rem;
-}
-
 /*最新消息*/
 
 .news-breadcrumb {
@@ -1001,7 +903,10 @@ cursor: pointer;
   padding: 2rem 0;
   display: none;
 }
-
+.news-wrap {
+  width: 100%;
+  height: 100%;
+}
 .news {
   margin: 1.5rem auto;
   display: flex;
