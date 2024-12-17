@@ -6,7 +6,6 @@
                 <li><a href="aboutus.html">最新消息</a></li>
             </ol>
         </div>
-
         <section class="news">
             <div class="container">
                 <div class="row">
@@ -156,3 +155,9 @@
         </section>
     </div>
 </template>
+
+<script>
+import './News.scss'
+
+
+</script>

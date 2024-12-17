@@ -1,6 +1,5 @@
-@import '@/assets/css/grid.scss';
-@import '@/assets/main.scss';
-@import '@/assets/css/mixin.scss';
+@import '@/assets/style/grid.scss';
+@import '@/assets/style/mixin.scss';
 
 * {
   padding: 0;
@@ -896,82 +895,6 @@ h2 {
 /*關於我們*/
 
 /*最新消息*/
-
-.news-breadcrumb {
-  width: 100%;
-  margin-top: 5rem;
-  padding: 2rem 0;
-  display: none;
-}
-.news-wrap {
-  width: 100%;
-  height: 100%;
-}
-.news {
-  margin: 1.5rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.news .container .row {
-  justify-content: center;
-}
-
-.news .container .row h3 {
-  font-size: 2rem;
-  margin: 6rem auto 2rem;
-}
-
-.news .news-btns {
-  width: 100%;
-  text-align: center;
-}
-
-.news .news-btns button {
-  padding: 0.5rem 1rem;
-  margin: 0.3rem;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-}
-
-.news .news-btns a {
-  color: #fff;
-  font-size: 1.3rem;
-}
-
-.news-btns .btn-hidden {
-  display: none;
-}
-
-.news .news-card-list .news-card {
-  width: 100%;
-  max-width: 75rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  padding: 2rem;
-}
-
-.news .news-card-list .news-card .news-card-date {
-  font-size: 1.2rem;
-}
-
-.news .news-card-list .news-card .news-card-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.news-card .news-card-txt {
-  max-width: 31rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  line-height: 1.5;
-  font-size: 18px;
-  padding: 1rem;
-}
 
 /*線上訂房*/
 
@@ -2270,7 +2193,6 @@ h2 {
     background-color: rgba(112, 151, 168, 0.5);
     cursor: pointer;
   }
-
   /*最新消息*/
 
   .news-breadcrumb {

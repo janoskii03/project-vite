@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import MainHeader from '@/components/MainHeader.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -10,3 +10,7 @@ import Footer from '@/components/Footer.vue';
   <RouterView />
   <Footer></Footer>
 </template>
+
+<style lang="scss">
+@import './assets/style/style.scss';
+</style>

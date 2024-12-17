@@ -7,8 +7,6 @@ export default {
 
 
     watch(route, () => {
-      console.log(123);
-
       window.scrollTo(0, 0
       );
     })

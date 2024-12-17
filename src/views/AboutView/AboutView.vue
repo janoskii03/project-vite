@@ -63,9 +63,9 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 </template>
 
-<style>
-
-</style>
+<script>
+import './AboutView.scss'
+</script>
