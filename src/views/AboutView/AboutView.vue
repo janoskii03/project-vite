@@ -67,5 +67,6 @@
 </template>
 
 <script>
-import './AboutView.scss'
+import './AboutView.scss';
+
 </script>

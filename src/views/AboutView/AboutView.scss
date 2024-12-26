@@ -81,3 +81,134 @@
     margin-bottom: 2rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .about .container .row h3 {
+    display: none;
+  }
+
+  .about img {
+    border-radius: 20px;
+  }
+
+  .about .about-home {
+    display: grid;
+    grid-template-areas:
+      'a a b b '
+      'a a b b '
+      'c d b b '
+      'e f g g '
+      '. . g g ';
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .about-home .home-txt {
+    grid-area: a;
+
+    align-self: center;
+    justify-self: center;
+    width: 400px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  .about-home .home-txt p {
+    font-size: 20px;
+    margin-bottom: 1em;
+  }
+
+  .about-home .down-right {
+    grid-area: g;
+
+    width: 400px;
+    letter-spacing: 0.5px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .about-home .down-right p {
+    font-size: 20px;
+    margin-bottom: 1em;
+  }
+
+  .about-home .up-right {
+    grid-area: b;
+    margin: 0;
+  }
+
+  .about-home .down-left {
+    grid-area: c;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  .about-home .down-left-next {
+    grid-area: d;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  .about-home .left-after {
+    grid-area: e;
+    margin: 0;
+  }
+
+  .about-home .left-after-next {
+    grid-area: f;
+    margin: 0;
+  }
+
+  .about .container .about-room-inside {
+    display: grid;
+    grid-template-areas:
+      'a a b b b b b c c'
+      'a a b b b b b c c'
+      'a a d d e e e c c'
+      'a a d d e e e c c';
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+
+  .about-room-inside .inside1 {
+    grid-area: a;
+    margin: 0;
+  }
+
+  .about-room-inside .inside2 {
+    grid-area: b;
+    margin: 0;
+  }
+
+  .about-room-inside .inside3 {
+    grid-area: c;
+    margin: 0;
+  }
+
+  .about-room-inside .inside4 {
+    grid-area: d;
+    margin: 0;
+  }
+
+  .about-room-inside .inside5 {
+    grid-area: e;
+    margin: 0;
+  }
+
+  .about .about-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about .about-card .about-card-txt {
+    align-self: center;
+    position: relative;
+    left: 10%;
+    padding: 3rem;
+    background-color: #b7e3ec;
+  }
+
+  .about .about-card .about-card-txt p + p {
+    margin-top: 1rem;
+  }
+}
