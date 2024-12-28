@@ -301,8 +301,6 @@
 
     </section>
 
-    <Map ></Map>
-
     <section class="main-about area">
       <div class="container">
         <form>
@@ -359,7 +357,7 @@
 <script setup>
 import HomeNews from '../../components/HomeNews.vue';
 import HomeSpot from '../../components/HomeSpot.vue';
-import Map from '@/components/Map/Map.vue';
+
 
 import { ref, reactive } from 'vue';
 
