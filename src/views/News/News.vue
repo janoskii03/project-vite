@@ -10,16 +10,15 @@
             <div class="container">
                 <div class="row">
                     <h3>最新消息</h3>
-                    <div class="news-btns">
-                        <button class="btns btn-all"><a href="#">所有訊息</a></button>
-                        <button class="btns btn-tour"><a href="#">旅遊訊息</a></button>
-                        <button class="btns btn-art"><a href="#">藝術亮點</a></button>
-                        <button class="btns btn-media"><a href="#">媒體分享</a></button>
+                    <div class="news-btns" v-if="menu.length > 1">
+                        <span class="btns" :class="item" v-for="(item, index) in menu" :key="index"
+                            @click="changeTab(item)">{{
+                                item === 'all' ? '全部訊息' : item }}</span>
                     </div>
 
                     <div class="news-card-list">
 
-                        <div class="news-card " v-for="(item, index) in newsData" :key="index">
+                        <div class="news-card " v-for="(item, index) in filterData" :key="index">
                             <div class="news-card-date">{{ item.date }}</div>
                             <div class="news-card-pic">
                                 <img src="@/assets/images/news/1.jpg" alt="Sanxiantai">
@@ -48,20 +47,32 @@ import news from '@/assets/Json/news.json';
 
 export default {
     setup() {
-        const state = {
-            avtiveType: '',
+        const state = reactive({
+            activeType: '',
             newsData: [],
 
-        }
+        })
 
         const menu = computed(() => {
-            const filterMenu = [{ type: 'all' }]
-
-            return filterMenu
+            const filterMenu = [...new Set(state.newsData.map(item => item.type))]
+            return ['all', ...filterMenu];
         })
+
+        const filterData = computed(() => {
+            if (state.activeType === 'all' || state.activeType === '') {
+                return state.newsData;
+            }
+            return state.newsData.filter((item) => item.type === state.activeType);
+        })
+
+
 
         const getNewsData = () => {
             state.newsData = news;
+        }
+
+        const changeTab = (type) => {
+            state.activeType = type;
         }
 
         onMounted(() => {
@@ -70,7 +81,9 @@ export default {
 
         return {
             ...toRefs(state),
-            menu
+            menu,
+            changeTab,
+            filterData
         }
     }
 

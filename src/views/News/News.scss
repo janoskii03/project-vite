@@ -9,20 +9,25 @@
 
   .news {
     margin: 1.5rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     .news-btns {
       width: 100%;
       text-align: center;
-      button {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .btns {
         padding: 0.5rem 1rem;
         margin: 0.3rem;
         background-color: #7097a8;
         border: 1px solid transparent;
-        a {
-          color: #fff;
-          font-size: 1.3rem;
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
         }
       }
       .btn-hidden {
@@ -63,6 +68,44 @@
         font-size: 2rem;
         margin: 6rem auto 2rem;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news-wrap {
+    .news-breadcrumb {
+      display: block;
+    }
+    .news .container .row h3 {
+      display: none;
+    }
+    .news-btns {
+      display: flex;
+      justify-content: center;
+    }
+    .news .news-btns .news-btn {
+      padding: 1.5em 5em;
+      margin: 1rem;
+      background-color: #7097a8;
+      border: 1px solid transparent;
+    }
+
+    .news .news-btns :hover {
+      background-color: rgba(112, 151, 168, 0.5);
+      cursor: pointer;
+    }
+
+    .news .news-card-list .news-card {
+      flex-direction: row;
+    }
+
+    .news .news-card-list .news-card .news-card-date {
+      font-size: 1.2rem;
+    }
+
+    .news-card .news-card-txt {
+      width: 31rem;
     }
   }
 }
