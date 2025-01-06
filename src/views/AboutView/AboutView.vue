@@ -67,6 +67,6 @@
 </template>
 
 <script>
-import './AboutView.scss';
+
 
 </script>

@@ -41,7 +41,7 @@
 
 <script>
 import axios from 'axios';
-import './News.scss'
+// import './News.scss'
 import { computed, watch, onMounted, reactive, toRefs } from 'vue';
 import news from '@/assets/Json/news.json';
 
