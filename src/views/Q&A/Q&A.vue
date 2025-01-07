@@ -114,20 +114,49 @@
   </div>
 </template> -->
 <template>
-  <a-collapse v-model:activeKey="activeKey" :bordered="false">
-    <a-collapse-panel key="1" header="This is panel header 1">
-      <p>{{ text }}</p>
-    </a-collapse-panel>
-    <a-collapse-panel key="2" header="This is panel header 2">
-      <p>{{ text }}</p>
-    </a-collapse-panel>
-    <a-collapse-panel key="3" header="This is panel header 3">
-      <p>{{ text }}</p>
-    </a-collapse-panel>
-  </a-collapse>
+  <div class="question-breadcrumb">
+    <ol class="breadcrumb-list">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="q&a.html">常見問題</a></li>
+    </ol>
+  </div>
+  <div class="question">
+    <div class="container">
+      <div class="row">
+        <h3 class="question-title">常見問題</h3>
+        <div class="question-list">
+          <a-collapse v-model:activeKey="activeKey" :bordered="false">
+            <a-collapse-panel :header="item.title" v-for="(item, index) in state.data" :key="index + 1">
+              <p>{{ item.answer }}</p>
+            </a-collapse-panel>
+          </a-collapse>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </template>
 <script setup>
-import { ref } from 'vue';
-const activeKey = ref(['1']);
-const text = `A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.`;
+import { reactive, ref, toRefs, onMounted } from 'vue';
+import axios from 'axios';
+
+
+const activeKey = ref([0]);
+const state = reactive({ data: [] });
+
+
+
+const fetchData = () => axios.get('qa.json').then((res) => {
+  state.data = res.data;
+
+}).catch((error) => console.log(error))
+  ;
+
+onMounted(() => {
+  fetchData();
+})
+
 </script>

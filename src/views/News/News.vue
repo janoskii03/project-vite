@@ -41,9 +41,7 @@
 
 <script>
 import axios from 'axios';
-// import './News.scss'
 import { computed, watch, onMounted, reactive, toRefs } from 'vue';
-import news from '@/assets/Json/news.json';
 
 export default {
     setup() {
@@ -68,7 +66,8 @@ export default {
 
 
         const getNewsData = () => {
-            state.newsData = news;
+            axios.get('news.json').then((res) => state.newsData = res.data
+            ).catch((error) => console.log(error));
         }
 
         const changeTab = (type) => {
