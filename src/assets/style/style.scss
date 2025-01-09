@@ -3,6 +3,7 @@
 @import '@/views/News/News.scss';
 @import '@/views/AboutView/AboutView.scss';
 @import '@/views/Q&A/Q&A.scss';
+@import '@/views/OnlineView/OnlineView.scss';
 
 * {
   padding: 0;
@@ -873,125 +874,6 @@ h2 {
 .modal .modal-btns {
   display: flex;
   justify-content: space-evenly;
-}
-
-#onlinePayment,
-#back {
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  background-color: #7097a8;
-}
-
-#onlinePayment a,
-#back a {
-  color: #fff;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
-
-.online {
-  margin-top: 4rem;
-}
-
-.online-breadcrumb {
-  width: 100%;
-  padding: 7rem 0 0 0;
-  display: none;
-}
-
-.online .container .col {
-  margin: auto;
-}
-
-.online .container .online-info {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-  background-color: #d3eff8;
-  padding: 2rem;
-  font-size: 1.3rem;
-}
-
-.online .online-info .online-info-in,
-.online .online-info .online-info-quit {
-  margin: 1rem;
-}
-
-.online .online-info .online-info-man,
-.online .online-info .online-info-child {
-  margin: 1rem;
-}
-
-.online .online-info .online-info-man img,
-.online .online-info .online-info-child img {
-  width: 0.9rem;
-  height: 0.9rem;
-}
-
-.online .container .online-info input {
-  width: 7rem;
-  padding: 0.3rem 0;
-}
-
-.online .online-info .online-info-man input,
-.online .online-info .online-info-child input {
-  width: 2.5rem;
-}
-
-.online .col .online-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 1.5rem;
-  position: relative;
-  transform: translateY(0px);
-}
-
-.online .col .online-card img {
-  width: 100%;
-  vertical-align: top;
-  transition: 1s;
-}
-
-.col .online-card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.col .online-card span {
-  font-size: 1.3rem;
-}
-
-.col .online-card button {
-  padding: 1rem 2rem;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-}
-
-.col .online-card button a {
-  font-size: 1.3rem;
-  color: #fff;
-}
-
-.online .online-know {
-  margin: 2rem auto 2rem;
-  padding: 2rem 0 3rem 0;
-  background-color: #d3eff8;
-}
-
-.online .online-know h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.online .online-know li {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  list-style: decimal;
-  margin-bottom: 1rem;
-  padding: 1rem;
 }
 
 /*加購行程*/
@@ -2005,61 +1887,6 @@ h2 {
     font-weight: 400;
     align-self: center;
     text-align: center;
-  }
-
-  /*房型介紹*/
-
-  .home-room .room-card-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .home-room .room-card-list h3 {
-    font-size: 18px;
-    text-align: center;
-    padding-bottom: 2em;
-    margin-bottom: 3em;
-    border-bottom: 5px solid #7097a8;
-  }
-
-  .home-room .room-card-list .room-card {
-    max-width: 960px;
-    display: flex;
-    margin: 0 0 6em 0;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .room-card .room-card-txt {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 2em;
-    gap: 2em;
-    font-size: 18px;
-  }
-
-  .room-card .room-card-txt button {
-    width: 150px;
-    font-size: 18px;
-    padding: 1em 2em;
-    background-color: #7097a8;
-    align-self: center;
-    border: 1px solid transparent;
-  }
-  .room-card .room-card-txt h4 {
-    font-size: 20px;
-  }
-  .room-card .room-card-txt a {
-    color: #fff;
-  }
-
-  .room-card .room-card-txt button:hover {
-    background-color: rgba(112, 151, 168, 0.5);
-    cursor: pointer;
   }
 
   /*麵包屑*/

@@ -2,9 +2,14 @@
   margin: 3rem;
 }
 
+.ant-collapse-item {
+  font-size: 16px;
+}
+
 .question .row {
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .question .container .row .question-title {
