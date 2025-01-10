@@ -86,7 +86,7 @@
                     <a href="#"><img src="@/assets/images/room/Mask group.jpg" alt="seesea-activity" /></a>
                   </div>
                   <div class="add-card-txt">
-                    <span>#{{ item.tag.split(',') }}</span>
+                    <span>{{ item.tag.split(',').map((item) => `#${item}`).join(' ') }}</span>
                     <div class="add-card-title">
                       <h4><a href="#">{{ item.name }}</a></h4>
                       <h4>{{ item.cancel }}</h4>
