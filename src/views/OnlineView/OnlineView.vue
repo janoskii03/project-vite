@@ -13,12 +13,12 @@
           <div class="online-info">
             <div class="online-info-in">
               <label for="">入住日期
-                <input id="checkIn" type="date" value="2023-06-10">
+                <input type="date" v-model="state.checkInDate">
               </label>
             </div>
             <div class="online-info-quit">
               <label for="">離開日期
-                <input id="checkOut" type="date" value="2023-06-11"></label>
+                <input type="date" v-model="state.checkOutDate"></label>
             </div>
 
             <div class="online-info-man">
@@ -75,58 +75,21 @@
               </li>
             </ul>
           </div>
-
-
-          <div class="online-add-list">
-            <h3>加購行程</h3>
-            <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 ">
-              <div class="col" v-for="(item, index) in state.data" :key="index">
-                <div class="add-card">
-                  <div class="add-card-pic">
-                    <a href="#"><img src="@/assets/images/room/Mask group.jpg" alt="seesea-activity" /></a>
-                  </div>
-                  <div class="add-card-txt">
-                    <span>{{ item.tag.split(',').map((item) => `#${item}`).join(' ') }}</span>
-                    <div class="add-card-title">
-                      <h4><a href="#">{{ item.name }}</a></h4>
-                      <h4>{{ item.cancel }}</h4>
-                    </div>
-                    <span class="card-txt-hour"><a href="#">{{ item.period }}</a></span>
-                    <p><a href="#">{{ item.desc }}</a></p>
-                    <div class="add-card-bottom">
-                      <h4><a href="#">NT${{ item.price }}</a></h4>
-                      <h4>{{ item.people }}人已購買</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-            </div>
-            <span class="add-more"><a href="#">更多行程></a></span>
-          </div>
-
+          <AddList />
         </div>
       </div>
     </section>
-
     <div class="modal">
       <div class="modal-header">
         <div class="modal-header-title">您的訂房資訊</div>
         <button class="online-modal-close-btn">&times;</button>
       </div>
-
       <div class="modal-body">
-
       </div>
       <div class="modal-btns">
         <button id="onlinePayment"><a href="payment.html">結帳</a></button>
         <button id="back"><a href="#">返回</a></button>
       </div>
-
-
-
     </div>
     <div class="online-overlay"></div>
   </div>
@@ -135,18 +98,15 @@
 <script setup>
 import axios from 'axios';
 import { onMounted, reactive } from 'vue';
+import AddList from '../../components/AddList/AddList.vue';
 
-const state = reactive({ data: [] });
+const state = reactive({
+  checkInDate: '',
+  checkOutDate: ''
+});
 
 
-const fetchData = () => axios.get('addList.json').then((res) => {
-  state.data = res.data;
 
-}).catch((error) => console.log(error))
-  ;
 
-onMounted(() => {
-  fetchData();
-})
 
 </script>

@@ -68,82 +68,7 @@
             <button class="last-price-btn"><a href="#">馬上預約</a></button>
           </div>
         </div>
-
-        <div class="room-add-list">
-
-          <h3>加購行程</h3>
-          <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 ">
-            <div class="col">
-              <div class="add-card">
-                <div class="add-card-pic">
-                  <a href="#"><img src="@/assets/images/room/Mask group.jpg" alt="seesea-activity" /></a>
-                </div>
-                <div class="add-card-txt">
-                  <span>#潛水浮潛</span>
-                  <div class="add-card-title">
-                    <h4><a href="#">台東潛水體驗</a></h4>
-                    <h4>7日內免費取消</h4>
-                  </div>
-                  <span class="card-txt-hour"><a href="#">2-4小時</a></span>
-                  <p><a href="#">體驗一下台東海洋之美，並享受豐富的生態</a></p>
-                  <div class="add-card-bottom">
-                    <h4><a href="#">NT$2000</a></h4>
-                    <h4>150人已購買</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="add-card">
-                <div class="add-card-pic">
-                  <a href="#"><img src="@/assets/images/room/Mask group (1).jpg" alt="seesea-activity" /></a>
-                </div>
-                <div class="add-card-txt">
-                  <span>#離島旅遊</span>
-                  <div class="add-card-title">
-                    <h4><a href="#">綠島一日遊</a></h4>
-                    <h4>7日內免費取消</h4>
-                  </div>
-                  <span class="card-txt-hour"><a href="#">4-6小時</a></span>
-                  <p>
-                    <a href="#">探索隱藏於熱帶天堂的自然島嶼，享受湛藍的大海美景</a>
-                  </p>
-                  <div class="add-card-bottom">
-                    <h4><a href="#">NT$3000</a></h4>
-                    <h4>250人已購買</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="add-card">
-                <div class="add-card-pic">
-                  <a href="#"><img src="@/assets/images/room/Mask group (2).jpg" alt="seesea-activity" /></a>
-                </div>
-                <div class="add-card-txt">
-                  <div class="card-txt-small">
-                    <span>#空中觀光 </span>
-                    <span> #季節限定</span>
-                  </div>
-                  <div class="add-card-title">
-                    <h4><a href="#">熱氣球之旅</a></h4>
-                  </div>
-                  <span class="card-txt-hour"><a href="#">1小時</a></span>
-                  <p>
-                    <a href="#">在高空中觀賞東台灣的美景，一生值得去一次的旅程</a>
-                  </p>
-                  <div class="add-card-bottom">
-                    <h4><a href="#">NT$10000</a></h4>
-                    <h4>15人已購買</h4>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <span class="add-more"><a href="#">更多行程></a></span>
-        </div>
-
+        <AddList />
         <div class="room-others">
           <h3>其它房型</h3>
           <div class="room-others-room">
@@ -248,6 +173,7 @@
 <script setup>
 import Swiper from 'swiper';
 import 'swiper/css';
+import AddList from '../../components/AddList/AddList.vue';
 
 
 

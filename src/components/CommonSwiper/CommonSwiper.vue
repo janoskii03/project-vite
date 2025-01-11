@@ -1,13 +1,10 @@
 <template>
-  <div
-    class="common-swiper"
-    :class="[{ isOverflowContainer, fit }, `${name}-swiper`]"
-    :style="{ gap: `${options?.spaceBetween ?? 0}px` }"
-  >
+  <div class="common-swiper" :class="[{ isOverflowContainer, fit }, `${name}-swiper`]"
+    :style="{ gap: `${options?.spaceBetween ?? 0}px` }">
     <template v-if="showArrow">
       <div class="swiper-arrow prev" :class="`${name}-prev`" slot="button-prev">
         <slot name="arrowLeft">
-          <svg-icon iconClass="arrow-left" />
+          <img src="@/assets/images/svg/arrow-left.svg" alt="">
         </slot>
       </div>
     </template>
@@ -22,7 +19,7 @@
     <template v-if="showArrow">
       <div class="swiper-arrow next" :class="`${name}-next`" slot="button-next">
         <slot name="arrowRight">
-          <svg-icon iconClass="arrow-right" />
+          <img src="@/assets/images/svg/arrow-right.svg" alt="">
         </slot>
       </div>
     </template>
@@ -44,7 +41,7 @@ export default {
     },
     options: {
       type: Object,
-      default: () => {},
+      default: () => { },
     },
     showPagination: {
       type: Boolean,
@@ -110,15 +107,19 @@ export default {
 .common-swiper {
   width: 100%;
   @include flex-center;
+
   &.isOverflowContainer .swiper-arrow {
     display: flex;
   }
+
   &.fit .swiper-slide {
     width: fit-content;
   }
+
   .swiper-arrow {
     display: none;
   }
+
   .swiper-container {
     flex: 1;
     height: 100%;
