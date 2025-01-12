@@ -40,7 +40,9 @@
               <div class="online-card-pic"><a href="#"><img src="@/assets/images/online/1.jpg"></a>
               </div>
               <span><a href="#">NT 2,000</a> </span>
-              <button id="ocean" class="reserve-btn"><a href="#">預約</a></button>
+              <Modal
+                :roomInfo="{ room: '海洋雙人房', checkInDate: state.checkInDate, checkOutDate: state.checkOutDate, price: '2000' }" />
+
             </div>
           </div>
           <div class="col">
@@ -79,19 +81,6 @@
         </div>
       </div>
     </section>
-    <div class="modal">
-      <div class="modal-header">
-        <div class="modal-header-title">您的訂房資訊</div>
-        <button class="online-modal-close-btn">&times;</button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-btns">
-        <button id="onlinePayment"><a href="payment.html">結帳</a></button>
-        <button id="back"><a href="#">返回</a></button>
-      </div>
-    </div>
-    <div class="online-overlay"></div>
   </div>
 </template>
 
@@ -99,10 +88,11 @@
 import axios from 'axios';
 import { onMounted, reactive } from 'vue';
 import AddList from '../../components/AddList/AddList.vue';
+import Modal from '@/components/Modal/Modal.vue'
 
 const state = reactive({
   checkInDate: '',
-  checkOutDate: ''
+  checkOutDate: '',
 });
 
 
