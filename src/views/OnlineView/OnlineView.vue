@@ -22,15 +22,16 @@
             </div>
 
             <div class="online-info-man">
-              <label for="">大人</label><img src="@/assets/images/online/Vector.svg" alt="plus" id="plus">
-              <input id="adult" type="text" value="0" style="text-align: center;" min="0">
-              <img src="@/assets/images/online/minus-solid 1.svg" alt="minus" id="minus">
+              <label for="">大人</label><img src="@/assets/images/online/Vector.svg" alt="plus" id="plus"
+                @click="addNumber('adult')">
+              <input id="adult" type="text" v-model="adultAmount" style="text-align: center;">
+              <img src="@/assets/images/online/minus-solid 1.svg" alt="minus" id="minus" @click="minusNumber('adult')">
             </div>
-
             <div class="online-info-child">
-              <label for="">小孩</label><img src="@/assets/images/online/Vector.svg" alt="plus" id="childPlus">
-              <input id="children" type="text" value="0" style="text-align: center;" min="0">
-              <img src="@/assets/images/online/minus-solid 1.svg" alt="minus" id="childMinus">
+              <label for="">小孩</label><img src="@/assets/images/online/Vector.svg" alt="plus" id="childPlus"
+                @click="addNumber">
+              <input id="children" type="text" v-model="childrenAmount" style="text-align: center;">
+              <img src="@/assets/images/online/minus-solid 1.svg" alt="minus" id="childMinus" @click="minusNumber">
             </div>
           </div>
           <div class="col">
@@ -41,7 +42,7 @@
               </div>
               <span><a href="#">NT 2,000</a> </span>
               <Modal
-                :roomInfo="{ room: '海洋雙人房', checkInDate: state.checkInDate, checkOutDate: state.checkOutDate, price: '2000' }" />
+                :roomInfo="{ room: '海洋雙人房', checkInDate: state.checkInDate, checkOutDate: state.checkOutDate, adult: adultAmount, children: childrenAmount, price: '2000' }" />
 
             </div>
           </div>
@@ -51,7 +52,8 @@
               <div class="online-card-pic"><a href="#"><img src="@/assets/images/online/2.jpg"></a>
               </div>
               <span><a href="#">NT 2,000</a></span>
-              <button id="simple" class="reserve-btn"><a href="#">預約</a></button>
+              <Modal
+                :roomInfo="{ room: '簡約雙人房', checkInDate: state.checkInDate, checkOutDate: state.checkOutDate, adult: adultAmount, children: childrenAmount, price: '2000' }" />
             </div>
           </div>
           <div class="col">
@@ -60,7 +62,8 @@
               <div class="online-card-pic"><a href="#"><img src="@/assets/images/online/3.jpg"></a>
               </div>
               <span><a href="#">NT 3,000</a></span>
-              <button id="four" class="reserve-btn"><a href="#">預約</a></button>
+              <Modal
+                :roomInfo="{ room: '溫馨四人房', checkInDate: state.checkInDate, checkOutDate: state.checkOutDate, adult: state.adultAmount, children: state.childrenAmount, price: '3000' }" />
             </div>
           </div>
           <div class="online-know">
@@ -84,16 +87,36 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import axios from 'axios';
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 import AddList from '../../components/AddList/AddList.vue';
-import Modal from '@/components/Modal/Modal.vue'
 
 const state = reactive({
   checkInDate: '',
   checkOutDate: '',
+
 });
+
+const adultAmount = ref<number>(0);
+const childrenAmount = ref<number>(0);
+
+const addNumber = (type = 'children') => {
+  if (type === 'adult') {
+    adultAmount.value++;
+  } else {
+    childrenAmount.value++;
+  }
+}
+const minusNumber = (type = 'children') => {
+  if (type === 'adult') {
+    if (adultAmount.value <= 0) return;
+    adultAmount.value--;
+  } else {
+    if (childrenAmount.value <= 0) return;
+    childrenAmount.value--;
+  }
+}
 
 
 
